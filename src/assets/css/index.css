@@ -1,4 +1,11 @@
 .Header {
   display: flex;
   justify-content: space-between;
+  padding: 40px;
+}
+
+.App {
+  margin: 70px auto;
+  width: 50%;
+  text-align: center;
 }
