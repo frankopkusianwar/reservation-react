@@ -29,15 +29,15 @@ const Router = () => {
               onSetOpen={onSetSidebarOpen}
               styles={{ sidebar: { background: "white", width: "15%"} }}
             >
-              <div className="Header">
-                <FontAwesomeIcon icon={faBars} onClick={() => onSetSidebarOpen(true)}/>
-                <FontAwesomeIcon icon={faSearch} />
-              </div>
-              <Route path="/" component={App} exact />
-              <Route path="/login" component={LoginForm} exact />
-              <Route path="/signup" component={SignupForm} exact />
-              <Route path="/rooms" component={RoomList} />
-            </Sidebar>
+            <div className="Header">
+              <FontAwesomeIcon icon={faBars} onClick={() => onSetSidebarOpen(true)}/>
+              <FontAwesomeIcon icon={faSearch} />
+            </div>
+            <Route path="/" component={App} exact />
+            <Route path="/login" component={LoginForm} exact />
+            <Route path="/signup" component={SignupForm} exact />
+            <Route path="/rooms" component={RoomList} />
+          </Sidebar>
         </Switch>
       </BrowserRouter>
     </div>
