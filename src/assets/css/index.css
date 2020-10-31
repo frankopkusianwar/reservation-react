@@ -27,7 +27,7 @@
   font-weight: bolder;
 }
 
-.form select, button {
+.form select, .form button {
   border-radius: 20px;
   padding: 10px;
   margin: 10px;
