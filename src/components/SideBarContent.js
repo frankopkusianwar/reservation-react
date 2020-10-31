@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const SideBar = () => {
+const SideBarContent = () => {
   return (
     <div className="SideBar">
       <ul>
-        <li>ROOMS</li>
+        <li><Link to="/rooms">ROOMS</Link></li>
         <li>LIFESTYLE</li>
         <li>SHOP</li>
       </ul>
@@ -12,4 +13,4 @@ const SideBar = () => {
   );
 }
 
-export default SideBar;
+export default SideBarContent;

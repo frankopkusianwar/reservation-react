@@ -6,7 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import './assets/css/index.css';
 import rootReducer from '../src/reducers/index'
-import Header from './components/Main';
+import Router from './components/Router';
 
 const store = createStore(
   rootReducer,
@@ -16,7 +16,7 @@ const store = createStore(
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Header />
+      <Router />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
