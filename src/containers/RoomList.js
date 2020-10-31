@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 const RoomList = () => {
 
   return (
-    <div className="bookList">
+    <div className="RoomList">
       <h2>Available Rooms</h2>
       <p>Please Select a Room</p>
       <Room />

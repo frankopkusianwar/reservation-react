@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const App = () => {
   return (
@@ -15,6 +16,9 @@ const App = () => {
           <option>location 1</option>
         </select>
         <button>Book Now</button>
+        <p>Already have an account? <Link to="/login">Login</Link></p>
+        <h3>OR</h3>
+        <p>Sign up <Link to="/signup">Here</Link></p>
       </div>
     </div>
   );
