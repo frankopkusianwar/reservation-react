@@ -5,9 +5,45 @@
 }
 
 .App {
-  margin: 70px auto;
-  width: 50%;
+  background: yellowgreen;
+  padding: 8%;
+  color: white;
   text-align: center;
+}
+
+.App-content {
+  width: 45%;
+  margin: auto;
+}
+
+.App-content p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.App h3 {
+  border-bottom: 0.2px solid white;
+  padding-bottom: 20px;
+  font-weight: bolder;
+}
+
+.form select, button {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
+}
+
+.form button {
+  background: white;
+  color: yellowgreen;
+  border: none;
+}
+
+.form select {
+  background: none;
+  color: white;
+  border: 2px solid white;
 }
 
 .RoomLDetails {
