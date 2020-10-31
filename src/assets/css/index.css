@@ -85,3 +85,30 @@
 .back {
   margin-left: 180px;
 }
+
+.SideBar h3 {
+  text-align: center;
+}
+
+.SideBar ul {
+  margin-top: 100px;
+}
+
+.SideBar ul li {
+ list-style: none;
+ padding: 10px;
+}
+
+.SideBar ul li a{
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.active{
+  background-color: yellowgreen;
+}
+
+.SideBar-social {
+  margin-top: 340px;
+  text-align: center;
+}

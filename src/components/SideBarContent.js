@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 const SideBarContent = () => {
   return (
     <div className="SideBar">
+      <h3>HOTEL ELDIMA</h3>
       <ul>
-        <li><Link to="/rooms">ROOMS</Link></li>
-        <li>LIFESTYLE</li>
-        <li>SHOP</li>
+        <li className="active"><Link to="/rooms">ROOMS</Link></li>
+        <li><Link to="#">LIFESTYLE</Link></li>
+        <li><Link to="#">SHOP</Link></li>
       </ul>
+      <div className="SideBar-social"><p>social media</p></div>
     </div>
   );
 }

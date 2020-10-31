@@ -14,7 +14,9 @@ const App = () => {
         <div className="form">
           <select>
             <option>--select--</option>
-            <option>location 1</option>
+            <option>Kampala</option>
+            <option>Mbale</option>
+            <option>Jinja</option>
           </select>
           <button>Book Now</button>
           <p>Already have an account? <Link to="/login">Login</Link></p>
