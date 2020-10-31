@@ -9,3 +9,10 @@
   width: 50%;
   text-align: center;
 }
+
+.RoomLDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  margin: auto;
+}

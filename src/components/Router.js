@@ -7,6 +7,7 @@ import { toggleMenu } from '../actions/index'
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import RoomList from '../containers/RoomList';
+import RoomDetails from '../containers/RoomDetails'
 import App from './App';
 import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
@@ -37,6 +38,7 @@ const Router = () => {
             <Route path="/login" component={LoginForm} exact />
             <Route path="/signup" component={SignupForm} exact />
             <Route path="/rooms" component={RoomList} />
+            <Route path="/details" component={RoomDetails} />
           </Sidebar>
         </Switch>
       </BrowserRouter>

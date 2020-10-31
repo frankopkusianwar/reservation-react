@@ -6,7 +6,7 @@ const App = () => {
     <div className="App">
       <h3>MAKE A ROOM RESERVATION WITH US</h3>
       <p>
-        We 500 different rooms at our main branch. Today 200 rooms are available. 
+        We have 500 different rooms at our main branch. Today 200 rooms are available. 
         We also have branches all over the country. If you want to find out and book from
         our different branches. Please use the selector below.
       </p>
