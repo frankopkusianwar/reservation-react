@@ -102,13 +102,34 @@
 .SideBar ul li a{
   text-decoration: none;
   font-weight: bolder;
+  color: black;
 }
 
 .active{
   background-color: yellowgreen;
 }
 
+.active a {
+  color: white;
+}
+
 .SideBar-social {
   margin-top: 340px;
   text-align: center;
+}
+
+.Room-img img{
+  width: 15%;
+}
+
+.description {
+  color: lightgray;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.title {
+  border-bottom: 3px dotted lightgray;
+  padding-bottom: 17px;
+  width: 13%;
 }
