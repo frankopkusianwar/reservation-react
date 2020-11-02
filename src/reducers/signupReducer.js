@@ -11,7 +11,7 @@ const signupReducer = (state = initialState, action) => {
         isSigningUp: action.payload,
         isValid: false,
       };
-    case 'REGISTER_USER_SUCESS':
+    case 'REGISTER_USER_SUCCESS':
       return {
         ...state,
         isSigningUp: false,

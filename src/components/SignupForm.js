@@ -1,35 +1,92 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import img_avatar2 from '../assets/img/img_avatar2.png';
+import signupAction from '../actions/signupAction'
+import { close } from '../actions/index'
 
 
-const SignupForm = ({ handleClose }) => {
-  return (
-    <form className="modal-content animate" action="" method="post">
-        <div className="imgcontainer">
-          <span className="close" title="Close Modal" onClick={handleClose}>&times;</span>
-          <img src={img_avatar2} alt="Avatar" className="avatar"/>
-        </div>
+export class SignupForm extends React.Component {
 
-        <div className="container">
-          <label htmlFor="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required />
+  constructor() {
+    super();
+    this.state = {
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    };
 
-          <label htmlFor="email"><b>Email</b></label>
-          <input type="email" placeholder="Enter Email" name="email" required />
+    this.changeHandler = this.changeHandler.bind(this);
+  }
 
-          <label htmlFor="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required /><br/>
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.isValid) {
+      const { history } = this.props;
+      history.push('/');
+    }
+  }
 
-          <label htmlFor="pswcnf"><b>Confirm Password</b></label>
-          <input type="password" placeholder="Enter Password" name="pswcnf" required /><br/>
+  changeHandler = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  handleSubmit = (e) => {
+    const { signupAction, close } = this.props;
+    e.preventDefault();
+    // get our form data out of state
+    const {
+      username, email, password, confirmPassword,
+    } = this.state;
+    const data = {
+      username,
+      email,
+      password,
+      confirmPassword,
+    };
+    signupAction(data);
+    close()
+  }
+
+  render () {
+    return (
+      <form className="modal-content animate" onSubmit={this.handleSubmit}>
+          <div className="imgcontainer">
+            <span className="close" title="Close Modal" onClick={this.props.handleClose}>&times;</span>
+            <img src={img_avatar2} alt="Avatar" className="avatar"/>
+          </div>
+
+          <div className="container">
+            <label htmlFor="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" onChange={this.changeHandler} required />
+
+            <label htmlFor="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" onChange={this.changeHandler} required />
+
+            <label htmlFor="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" onChange={this.changeHandler} required /><br/>
+
+            <label htmlFor="confirmPassword"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Enter Password" name="confirmPassword" onChange={this.changeHandler} required /><br/>
+              
+            <button type="submit">Signup</button>
             
-          <button type="submit">Signup</button>
-          
+          </div>
+        <div className="container" style={{background:"#f1f1f1"}}>
         </div>
-      <div class="container" style={{background:"#f1f1f1"}}>
-      </div>
-    </form>
-  );
+      </form>
+    );
+  }
 }
 
-export default SignupForm;
+export const mapStateToProps = (state) => {
+  const { isSigningUp, isValid } = state.signupReducer;
+  return {
+    isSigningUp,
+    isValid,
+  };
+};
+
+export default connect(mapStateToProps, { signupAction, close })(SignupForm);

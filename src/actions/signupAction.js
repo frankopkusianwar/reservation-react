@@ -1,5 +1,8 @@
+import axios from 'axios';
+import { toast } from 'react-toastify';
+
 const REGISTER_USER = 'REGISTER_USER';
-const REGISTER_USER_SUCESS = 'REGISTER_USER_SUCCESS';
+const REGISTER_USER_SUCCESS = 'REGISTER_USER_SUCCESS';
 const REGISTER_USER_FAILURE = 'REGISTER_USER_FAILURE';
 
 export const registerUser = () => ({
@@ -8,8 +11,8 @@ export const registerUser = () => ({
 });
 
 export const registerUserSucess = response => ({
-  type: REGISTER_USER_SUCESS,
-  payload: { msg: response.data },
+  type: REGISTER_USER_SUCCESS,
+  payload: { msg: response.message },
 });
 
 export const registerUserfailure = error => ({
@@ -20,7 +23,7 @@ export const registerUserfailure = error => ({
 export const signupAction = newUser => (dispatch) => {
   dispatch(registerUser());
   return axios
-    .post('https://capstone-api-v1.herokuapp.com/signup', newUser)
+    .post('https://capstone-api-v1.herokuapp.com/signup', {user: newUser})
     .then((response) => {
       toast.dismiss();
       dispatch(registerUserSucess(response));
@@ -30,7 +33,7 @@ export const signupAction = newUser => (dispatch) => {
           hideProgressBar: false,
         });
       } else if (response.status === 200) {
-        toast.error(`${response.data.message}`, {
+        toast.error(`${response.message}`, {
           autoClose: 3000,
           hideProgressBar: true,
         });
@@ -40,10 +43,10 @@ export const signupAction = newUser => (dispatch) => {
       (error) => {
         dispatch({
           type: REGISTER_USER_FAILURE,
-          payload: error.response.data,
+          payload: error.response,
         });
         toast.dismiss();
-        toast.error(`${error.response.data.message}`, {
+        toast.error(`${error.response}`, {
           autoClose: 3000,
           hideProgressBar: true,
         });

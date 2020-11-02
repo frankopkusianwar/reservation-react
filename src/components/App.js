@@ -11,16 +11,6 @@ const App = () => {
   const dispatch = useDispatch();
   const modal = useSelector(state => state.modalReducer.modal);
 
-  // let handleChange = (e) => {
-  //   const target = e.target;
-  //   const name = target.name;
-  //   const value = target.value;
-
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // }
-
   let handleSubmit = (e) => {
     dispatch(submitClose());
   }
