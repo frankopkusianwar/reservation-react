@@ -20,14 +20,13 @@ const SignupForm = ({ handleClose }) => {
           <label htmlFor="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required /><br/>
 
-          <label htmlFor="psw"><b>Confirm Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required /><br/>
+          <label htmlFor="pswcnf"><b>Confirm Password</b></label>
+          <input type="password" placeholder="Enter Password" name="pswcnf" required /><br/>
             
-          <button type="submit">Login</button>
+          <button type="submit">Signup</button>
           
         </div>
       <div class="container" style={{background:"#f1f1f1"}}>
-        <button type="button" onClick={handleClose} className="cancelbtn">Cancel</button>
       </div>
     </form>
   );

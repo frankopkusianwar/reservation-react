@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import LoginForm from './LoginForm'
-import SignForm from './LoginForm'
+import SignupForm from './SignupForm'
 import Modal from "./Modal"
 import { submitClose, close, show } from '../actions/index' 
 
@@ -50,12 +50,12 @@ const App = () => {
             <option>Jinja</option>
           </select>
           <button className="button">Book Now</button>
-          <p>Already have an account? <Link to="#" onClick={modalOpen}>Login</Link></p>
+          <p>Already have an account? <Link to="#">Login</Link></p>
           <Modal show={modal}>
-            <LoginForm handleClose={modalClose}/>
+            <SignupForm handleClose={modalClose}/>
           </Modal>
           <h4>OR</h4>
-          <p>Sign up <Link to="#">Here</Link></p>
+          <p>Sign up <Link to="#" onClick={modalOpen}>Here</Link></p>
         </div>
       </div>
     </div>
