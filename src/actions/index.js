@@ -3,10 +3,10 @@ const SHOW = 'SHOW'
 const CLOSE = 'CLOSE'
 const CLOSE_LOGIN_SUBMIT = 'CLOSE_LOGIN_SUBMIT'
 const FETCH_ROOMS_REQUEST = 'FETCH_ROOMS_REQUEST';
-const FETCH__SROOMS_UCCESS = 'FETCH_ROOMS_SUCCESS';
+const FETCH_ROOMS_SUCCESS = 'FETCH_ROOMS_SUCCESS';
 const FETCH_ROOMS_FAILURE = 'FETCH_ROOMS_FAILURE';
 const FETCH_ONE_ROOM_REQUEST = 'FETCH_ONE_ROOM_REQUEST';
-const FETCH_ONE_ROOM__REQUEST_SUCCESS = 'FETCH_ONE_ROOM_REQUEST_SUCCESS';
+const FETCH_ONE_ROOM_REQUEST_SUCCESS = 'FETCH_ONE_ROOM_REQUEST_SUCCESS';
 const FETCH_ONE_ROOM_REQUEST_FAILURE = 'FETCH_ONE_ROOM_REQUEST_FAILURE';
 
 export const toggleMenu = status => ({
@@ -34,7 +34,7 @@ export const fetchRoomsRequest = () => ({
   type: FETCH_ROOMS_REQUEST,
 });
 
-export const fetchRoomssSuccess = rooms => ({
+export const fetchRoomsSuccess = (rooms) => ({
   type: FETCH_ROOMS_SUCCESS,
   payload: rooms,
 });
@@ -45,7 +45,7 @@ export const fetchRoomsFailure = error => ({
 });
 
 export const fetchOneRoomRequest = () => ({
-  type: FETCH_ONE_ROOM__REQUEST,
+  type: FETCH_ONE_ROOM_REQUEST,
 });
 
 export const fetchOneRoomSuccess = room => ({
@@ -74,9 +74,9 @@ export const fetchOneRoom = room_id => dispatch => {
   dispatch(fetchOneRoom);
   axios.get(ROOMURL).then(response => {
     const room = response.data;
-    dispatch(fetchRoomSuccess(room));
+    dispatch(fetchOneRoomSuccess(room));
   }).catch(error => {
     const errorMessage = error.message;
-    dispatch(fetchRoomFailure(errorMessage));
+    dispatch(fetchOneRoomFailure(errorMessage));
   });
 };
