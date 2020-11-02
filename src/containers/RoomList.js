@@ -14,14 +14,18 @@ const RoomList = () => {
   const allRooms = useSelector(state => state.rooms.rooms);
   return (
     <div className="RoomList">
-      <h2>Available Rooms</h2>
-      <p>Please Select a Room</p>
-      {
-        allRooms
-        .map((result, key) => (
-            <Room result={result} key={key} />
-          ))
-      }
+      <div className="RoomList-text">
+        <h2>Available Rooms</h2>
+        <p>Please Select a Room</p>
+      </div>
+      <div className="RoomList-content">
+        {
+          allRooms
+          .map((result, key) => (
+              <Room result={result} key={key} />
+            ))
+        }
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import image2 from '../assets/img/image2.jpg'
 import circle from '../assets/img/circle.PNG'
 import propTypes from 'prop-types';
@@ -29,7 +30,7 @@ const RoomLDetails = (props) => {
           </div>
         </div>
       </div>
-      <div className="book back"><button>back</button></div>
+      <div className="book back"><Link to="/rooms"><button className="bck">back</button></Link></div>
     </div>
   );
 };

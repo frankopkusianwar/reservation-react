@@ -51,6 +51,20 @@
   color: yellowgreen;
 }
 
+.RoomList {
+  margin: auto;
+  width: 90%;
+}
+
+.RoomList-text {
+  text-align: center;
+}
+
+.RoomList-content {
+  display: flex;
+  margin-top: 100px;
+}
+
 .RoomLDetails {
   display: flex;
   justify-content: space-between;
@@ -84,6 +98,10 @@
 
 .back {
   margin-left: 180px;
+}
+
+.bck {
+  width: 10%;
 }
 
 .SideBar h3 {
