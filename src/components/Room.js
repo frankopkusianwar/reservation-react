@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import image1 from '../assets/img/image1.jpg'
 import image2 from '../assets/img/image2.jpg'
 import image3 from '../assets/img/image3.jpg'
@@ -14,6 +15,7 @@ const Room = ({ result }) => (
     <div className="Room-img"><img src={image1} alt="room" /></div>
     <h5 className='title'>{result.title}</h5>
     <p className='description'>{result.bed}</p>
+    <Link to={{ pathname: `/details/${result.id}`, state: { result },}}>details</Link>
     <div className='social-icons'>
       social media links here
     </div>

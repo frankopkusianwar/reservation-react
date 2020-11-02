@@ -38,7 +38,7 @@ const Router = () => {
             <Route path="/login" component={LoginForm} exact />
             <Route path="/signup" component={SignupForm} exact />
             <Route path="/rooms" component={RoomList} />
-            <Route path="/details" component={RoomDetails} />
+            <Route path="/details/:id" component={RoomDetails} />
           </Sidebar>
         </Switch>
       </BrowserRouter>

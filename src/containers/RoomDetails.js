@@ -1,22 +1,26 @@
 import React from 'react';
-import room from '../assets/img/imagedet.PNG'
+import image2 from '../assets/img/image2.jpg'
 import circle from '../assets/img/circle.PNG'
 import propTypes from 'prop-types';
 
-const RoomLDetails = () => {
+const RoomLDetails = (props) => {
+
+  const roomData = props.location.state.result;
+
   return (
     <div>
       <div className="RoomLDetails ">
-        <div>
-          <img src={room} alt="room" />
+        <div className="Room-details-img">
+          <img src={image2} alt="room" />
         </div>
         <div>
-          <h1>room title</h1>
+          <h1>{ roomData.title }</h1>
           <div className="details-p">
-            <p>Fee: $100</p>
-            <p>Bed: 1 single bed</p>
-            <p>View: city view</p>
-            <p>Duration: 72 hrs</p>
+            <p><b>Fee:</b> { roomData.fee }</p>
+            <p><b>Bed:</b> { roomData.bed }</p>
+            <p><b>View:</b> city view</p>
+            <p><b>Size:</b>{roomData.size }</p>
+            <p><b>Duration:</b> 72 hrs</p>
           </div>
           <div className='details-last'>
             <p>DISCOVER MORE ROOMS</p>
