@@ -20,7 +20,7 @@ const LoginForm = ({ handleClose }) => {
           <button type="submit">Login</button>
           
         </div>
-      <div class="container" style={{background:"#f1f1f1"}}>
+      <div className="container" style={{background:"#f1f1f1"}}>
         <button type="button" onClick={handleClose} className="cancelbtn">Cancel</button>
       </div>
     </form>

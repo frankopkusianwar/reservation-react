@@ -12,7 +12,7 @@ const roomsReducer = (state = initialState, action) => {
     case 'FETCH_ROOMS_SUCCESS':
       return {
         ...state,
-        rooms: action.payload.result,
+        rooms: action.payload,
         error: '',
       };
     case 'FETCH_ROOMS_FAILURE':
