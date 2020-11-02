@@ -1,7 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import LoginForm from './LoginForm'
+import SignForm from './LoginForm'
+import Modal from "./Modal"
+import { submitClose, close, show } from '../actions/index' 
 
 const App = () => {
+
+  const dispatch = useDispatch();
+  const modal = useSelector(state => state.modalReducer.modal);
+
+  // let handleChange = (e) => {
+  //   const target = e.target;
+  //   const name = target.name;
+  //   const value = target.value;
+
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // }
+
+  let handleSubmit = (e) => {
+    dispatch(submitClose());
+  }
+
+  let modalOpen = () => {
+    dispatch(show());
+  }
+
+  let modalClose = () => {
+    dispatch(close());
+  }
+
   return (
     <div className="App">
       <div className="App-content">
@@ -18,10 +49,13 @@ const App = () => {
             <option>Mbale</option>
             <option>Jinja</option>
           </select>
-          <button>Book Now</button>
-          <p>Already have an account? <Link to="/login">Login</Link></p>
+          <button className="button">Book Now</button>
+          <p>Already have an account? <Link to="#" onClick={modalOpen}>Login</Link></p>
+          <Modal show={modal}>
+            <LoginForm handleClose={modalClose}/>
+          </Modal>
           <h4>OR</h4>
-          <p>Sign up <Link to="/signup">Here</Link></p>
+          <p>Sign up <Link to="#">Here</Link></p>
         </div>
       </div>
     </div>
