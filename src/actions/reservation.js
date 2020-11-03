@@ -23,10 +23,14 @@ export const createReservationFailure = error => ({
 
 
 export const startCreate = reservation => (dispatch) => {
+  console.log(sessionStorage.token);
   dispatch(createReservation());
   return axios
-    .post('https://capstone-api-v1.herokuapp.com/reservation', {reservation})
+    .post('https://capstone-api-v1.herokuapp.com/reservations', reservation, {headers: {
+      'Authorization': `${sessionStorage.token}`
+    },})
     .then((response) => {
+      console.log(response);
       toast.dismiss();
       dispatch(createReservationSucess(response));
       if (response.status === 201) {
@@ -45,10 +49,10 @@ export const startCreate = reservation => (dispatch) => {
       (error) => {
         dispatch({
           type: CREATE_RESERVATION_FAILURE,
-          payload: error.response,
+          payload: error,
         });
         toast.dismiss();
-        toast.error(`${error.response}`, {
+        toast.error(`${error}`, {
           autoClose: 3000,
           hideProgressBar: true,
         });

@@ -1,30 +1,85 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { close } from '../../actions/index'
+import { startCreate } from '../../actions/reservation'
 import img_avatar2 from '../../assets/img/img_avatar2.png';
 
-const ReservationForm = ({ handleClose }) => {
+export class ReservationForm extends React.Component {
 
+  constructor() {
+    super();
+    this.state = {
+      date: '',
+      city: '',
+      room_id: '',
+    };
+
+    this.changeHandler = this.changeHandler.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.isReserved) {
+      alert('Booking created done')
+      window.location.reload()
+    }
+  }
+
+  changeHandler = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  handleSubmit = (e) => {
+    const { startCreate , close, room_id } = this.props;
+    e.preventDefault();
+    // get our form data out of state
+    const {
+      date, city,
+    } = this.state;
+    
+    const data = {
+      date,
+      city,
+      room_id,
+    };
+    startCreate(data);
+    close()
+  }
+
+  render() {
     return (
-      <form className="modal-content animate" action="" method="post">
+      <form className="modal-content animate" onSubmit={this.handleSubmit}>
         <div className="imgcontainer">
-          <span className="close" title="Close Modal" onClick={handleClose}>&times;</span>
+          <span className="close" title="Close Modal" onClick={this.props.handleClose}>&times;</span>
           <img src={img_avatar2} alt="Avatar" className="avatar"/>
         </div>
 
         <div className="container">
           <label htmlFor="date"><b>Date</b></label>
-          <input type="date" placeholder="Enter Date" name="date" className="date" required /><br/>
+          <input type="date" placeholder="Enter Date" name="date" className="date" onChange={this.changeHandler} required /><br/>
 
-          <label htmlFor="loc"><b>Location</b></label>
-          <input type="text" placeholder="Enter Location" name="loc" required /><br/>
+          <label htmlFor="city"><b>city</b></label>
+          <input type="text" placeholder="Enter city" name="city" onChange={this.changeHandler} required /><br/>
             
-          <button type="submit">Login</button>
+          <button type="submit">Book</button>
           
         </div>
       <div className="container" style={{background:"#f1f1f1"}}>
-        <button type="button" onClick={handleClose} className="cancelbtn">Cancel</button>
+        <button type="button" onClick={this.props.handleClose} className="cancelbtn">Cancel</button>
       </div>
     </form>
   );
+  }
 }
 
-export default ReservationForm;
+export const mapStateToProps = (state) => {
+  const { isReserving, isReserved } = state.reservationReducer;
+  return {
+    isReserving,
+    isReserved,
+  };
+};
+
+export default connect(mapStateToProps, { startCreate, close })(ReservationForm);

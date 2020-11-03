@@ -46,7 +46,7 @@ const RoomLDetails = (props) => {
             <p>DISCOVER MORE ROOMS</p>
             <img src={circle} alt="circle" />
             <ReservationModal show={modal}>
-              <ReservationForm handleClose={modalClose}/>
+              <ReservationForm handleClose={modalClose} room_id={roomData.id} />
             </ReservationModal>
             <div className="book"><button onClick={modalOpen}>Book Room</button></div>
           </div>
