@@ -22,12 +22,10 @@ export const loginUserfailure = error => ({
 });
 
 export const signinAction = credentials => (dispatch) => {
-  console.log(credentials)
   dispatch(loginUser());
   return axios
     .post('https://capstone-api-v1.herokuapp.com/auth/login', credentials)
     .then((response) => {
-      console.log(response)
       sessionStorage.setItem('token', response.data.auth_token);
       toast.dismiss();
       dispatch(loginUserSucess(response));
