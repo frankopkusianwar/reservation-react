@@ -1,7 +1,6 @@
 import React from "react";
-import SignupForm from './LoginForm'
 
-const Modal = ({ show, children }) => {
+const LoginModal = ({ show, children }) => {
   const showHideClassName = show ? "block" : "none";
   return (
     <div className="modal" style={{display: showHideClassName}}>
@@ -10,4 +9,4 @@ const Modal = ({ show, children }) => {
   );
 };
 
-export default Modal;
+export default LoginModal;

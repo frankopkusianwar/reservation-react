@@ -21,8 +21,8 @@ export class SignupForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.isValid) {
-      const { history } = this.props;
-      history.push('/');
+      alert('Account created. Please login')
+      window.location.reload()
     }
   }
 

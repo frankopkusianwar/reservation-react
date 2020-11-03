@@ -4,16 +4,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
 import Modal from "./Modal"
-import { submitClose, close, show } from '../actions/index' 
+import LoginModal from './modals/LoginModal'
+import { close, show, close_login, show_login } from '../actions/index' 
 
 const App = () => {
 
   const dispatch = useDispatch();
   const modal = useSelector(state => state.modalReducer.modal);
+  const logModal = useSelector(state => state.modalLogin.loginmodal);
 
-  let handleSubmit = (e) => {
-    dispatch(submitClose());
-  }
 
   let modalOpen = () => {
     dispatch(show());
@@ -21,6 +20,14 @@ const App = () => {
 
   let modalClose = () => {
     dispatch(close());
+  }
+
+  let loginOpen = () => {
+    dispatch(show_login());
+  }
+
+  let loginClose = () => {
+    dispatch(close_login());
   }
 
   return (
@@ -40,10 +47,13 @@ const App = () => {
             <option>Jinja</option>
           </select>
           <button className="button">Book Now</button>
-          <p>Already have an account? <Link to="#">Login</Link></p>
+          <p>Already have an account? <Link to="#" onClick={loginOpen}>Login</Link></p>
           <Modal show={modal}>
             <SignupForm handleClose={modalClose}/>
           </Modal>
+          <LoginModal show={logModal}>
+            <LoginForm handleClose={loginClose}/>
+          </LoginModal>
           <h4>OR</h4>
           <p>Sign up <Link to="#" onClick={modalOpen}>Here</Link></p>
         </div>

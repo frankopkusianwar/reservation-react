@@ -3,6 +3,8 @@ import axios from 'axios';
 const TOGGLE_MENU = 'TOGGLE_MENU'
 const SHOW = 'SHOW'
 const CLOSE = 'CLOSE'
+const SHOW_LOGIN = 'SHOW_LOGIN'
+const CLOSE_LOGIN = 'CLOSE_LOGIN'
 const CLOSE_LOGIN_SUBMIT = 'CLOSE_LOGIN_SUBMIT'
 const FETCH_ROOMS_REQUEST = 'FETCH_ROOMS_REQUEST';
 const FETCH_ROOMS_SUCCESS = 'FETCH_ROOMS_SUCCESS';
@@ -21,6 +23,16 @@ export const show = () => ({
 
 export const close = () => ({
   type: CLOSE,
+  payload: false
+});
+
+export const show_login = () => ({
+  type: SHOW_LOGIN,
+  payload: true
+});
+
+export const close_login = () => ({
+  type: CLOSE_LOGIN,
   payload: false
 });
 
