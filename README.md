@@ -24,9 +24,9 @@ Reservation app enables users to view rooms, room details and make reservations 
 
 [Live Demo Link](https://reservation-react.herokuapp.com/)
 
-## API LINK
+## API GITHUB LINK
 
-[Live Demo Link](https://github.com/frankopkusianwar/capstone-api)
+[API](https://github.com/frankopkusianwar/capstone-api)
 
 ## Getting Started
 
