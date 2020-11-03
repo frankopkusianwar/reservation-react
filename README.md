@@ -16,16 +16,17 @@ Reservation app enables users to view rooms, room details and make reservations 
 ## Home Page
 ![screenshot]()
 
-## Details Page
-![screenshot]()
-
 ## Built With
 
 - React-Redux
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://reservation-react.herokuapp.com/)
+
+## API LINK
+
+[Live Demo Link](https://github.com/frankopkusianwar/capstone-api)
 
 ## Getting Started
 
