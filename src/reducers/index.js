@@ -5,6 +5,7 @@ import roomReducer from './roomReducer'
 import signupReducer from './signupReducer'
 import signinReducer from '../reducers/signinReaducer'
 import modalLogin from './modalLogin'
+import reservationReducer from './reservation'
 
 const rootReducer = combineReducers({
   sidebarOpen: sideBar,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   rooms: roomReducer,
   signupReducer,
   signinReducer,
+  reservationReducer,
 });
 
 export default rootReducer;
