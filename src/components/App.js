@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import LoginForm from './LoginForm'
-import SignupForm from './SignupForm'
+import LoginForm from './forms/LoginForm'
+import SignupForm from './forms/SignupForm'
 import Modal from "./Modal"
 import LoginModal from './modals/LoginModal'
 import { close, show, close_login, show_login } from '../actions/index' 

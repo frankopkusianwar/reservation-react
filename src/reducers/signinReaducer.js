@@ -4,19 +4,19 @@ const initialState = {
 };
 const signinReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_USER:
+    case 'LOGIN_USER':
       return {
         ...state,
         isLoggingIn: action.payload,
         loggedIn: false,
       };
-    case LOGIN_USER_SUCESS:
+    case 'LOGIN_USER_SUCESS':
       return {
         ...state,
         loggedIn: true,
         data: action.payload,
       };
-    case LOGIN_USER_FAILURE:
+    case 'LOGIN_USER_FAILURE':
       return {
         ...state,
         loggedIn: false,

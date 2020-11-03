@@ -1,5 +1,5 @@
 import React from 'react';
-import img_avatar2 from '../assets/img/img_avatar2.png';
+import img_avatar2 from '../../assets/img/img_avatar2.png';
 
 const LoginForm = ({ handleClose }) => {
 

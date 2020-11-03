@@ -9,8 +9,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import RoomList from '../containers/RoomList';
 import RoomDetails from '../containers/RoomDetails'
 import App from './App';
-import LoginForm from './LoginForm'
-import SignupForm from './SignupForm'
 
 
 const Router = () => {
@@ -35,8 +33,6 @@ const Router = () => {
               <FontAwesomeIcon icon={faSearch} />
             </div>
             <Route path="/" component={App} exact />
-            <Route path="/login" component={LoginForm} exact />
-            <Route path="/signup" component={SignupForm} exact />
             <Route path="/rooms" component={RoomList} />
             <Route path="/details/:id" component={RoomDetails} />
           </Sidebar>

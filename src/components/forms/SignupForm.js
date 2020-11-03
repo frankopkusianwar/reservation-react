@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import img_avatar2 from '../assets/img/img_avatar2.png';
-import signupAction from '../actions/signupAction'
-import { close } from '../actions/index'
+import img_avatar2 from '../../assets/img/img_avatar2.png';
+import signupAction from '../../actions/signupAction'
+import { close } from '../../actions/index'
 
 
 export class SignupForm extends React.Component {
