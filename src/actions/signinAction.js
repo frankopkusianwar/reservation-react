@@ -13,7 +13,7 @@ export const loginUser = () => ({
 
 export const loginUserSucess = response => ({
   type: LOGIN_USER_SUCESS,
-  payload: { msg: response.data },
+  payload: { msg: 'looged in', token:response.data.auth_token },
 });
 
 export const loginUserfailure = error => ({
@@ -22,11 +22,13 @@ export const loginUserfailure = error => ({
 });
 
 export const signinAction = credentials => (dispatch) => {
+  console.log(credentials)
   dispatch(loginUser());
   return axios
     .post('https://capstone-api-v1.herokuapp.com/auth/login', credentials)
     .then((response) => {
-      sessionStorage.setItem('token', response.auth_token);
+      console.log(response)
+      sessionStorage.setItem('token', response.data.auth_token);
       toast.dismiss();
       dispatch(loginUserSucess(response));
       toast.success('successfully loggedin!', {
@@ -41,7 +43,7 @@ export const signinAction = credentials => (dispatch) => {
           payload: error,
         });
         toast.dismiss();
-        toast.error(`${error.response.data.message}`, {
+        toast.error(`${error.response.message}`, {
           autoClose: 3000,
           hideProgressBar: true,
         });
