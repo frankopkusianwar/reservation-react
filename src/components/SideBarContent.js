@@ -7,7 +7,8 @@ const SideBarContent = () => {
     <div className="SideBar">
       <h3>HOTEL ELDIMA</h3>
       <ul>
-        <li className="active"><Link to="/rooms">ROOMS</Link></li>
+        <li className="active"><Link to="/">HOME</Link></li>
+        <li><Link to="/rooms">ROOMS</Link></li>
         <li><Link to="#">LIFESTYLE</Link></li>
         <li><Link to="#">SHOP</Link></li>
       </ul>
