@@ -60,9 +60,9 @@
 
 }
 
-/* .Room-img img {
-  width: 15%;
-} */
+.Room-img img {
+  width: 95%;
+}
 .Room-details-img {
   margin-left: 70px;
   width: 60%;
@@ -73,17 +73,17 @@
   margin-left: 200px;
 }
 
-/* .description {
+.description {
   color: lightgray;
   font-size: 14px;
   margin-top: 10px;
-} */
+}
 
-/* .title {
+.title {
   border-bottom: 3px dotted lightgray;
   padding-bottom: 17px;
   width: 13%;
-} */
+}
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
