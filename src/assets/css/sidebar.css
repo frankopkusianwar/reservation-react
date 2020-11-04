@@ -5,31 +5,45 @@
 }
 
 .SideBar h3 {
-  
+  font-weight: bold;
+  text-align: center;
 }
 
 .SideBar ul {
-
+  margin-top:100px;
 }
 
 .SideBar ul li {
-  
+  list-style: none;
+  padding: 10px;
 }
 
 .active a {
-  
+  color: white;
 }
 
 .SideBar ul li a {
-  
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 .active {
-  
+  background-color: yellowgreen;
 }
 
 .SideBar-social {
-  
+  margin-top: 300px;
+  text-align: center;
+}
+
+.side-last {
+  font-size: 10px;
+  text-align: center;
+}
+
+.icon {
+  margin: 15px;
+  font-weight: bolder;
 }
 
 /* On screens that are 992px or less, set the background color to blue */
@@ -38,5 +52,29 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
+  }
+
+  .SideBar h3 {
+    font-size: 14px;
+  }
+  
+  .SideBar ul li {
+    padding: 8px;
+  }
+
+  .SideBar ul li a {
+    font-size: 13px;
+  }
+
+  .SideBar-social {
+    margin-top: 400px;
+  }
+  
+  .side-last {
+    font-size: 8px;
+  }
+  
+  .icon {
+    margin: 10px;
   }
 }

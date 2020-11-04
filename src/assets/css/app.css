@@ -48,12 +48,6 @@
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
-  .Header {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-  }
-
   .App-content {
     width: 50%;
   }
