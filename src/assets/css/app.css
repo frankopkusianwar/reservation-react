@@ -48,8 +48,12 @@
 
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
+  .App {
+    padding: 22.5%;
+  }
+
   .App-content {
-    width: 50%;
+    width: 80%;
   }
   
   .App-content p {
