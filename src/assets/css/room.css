@@ -71,7 +71,7 @@
 .Room-details-img img {
   width: 70%;
   margin-left: 200px;
-}
+} 
 
 /* .description {
   color: lightgray;
@@ -83,4 +83,64 @@
   border-bottom: 3px dotted lightgray;
   padding-bottom: 17px;
   width: 13%;
-} */
+} */ 
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+
+.RoomLDetails {
+  margin-top: 100px;
+}
+
+.details-last p {
+  font-size: 9px;
+  font-weight: bolder;
+}
+
+.details-p p {
+  line-height: 5px;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-p p:nth-child(odd) {
+  background-color: #f2f2f2;
+  padding: 7px;
+}
+
+.details-text {
+  margin-right: 50px;
+  text-align: right;
+  width: 30%;
+  margin-left: 50px;
+}
+
+.book button {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: yellowgreen;
+  border: none;
+  color: white;
+  margin-top: 30px;
+  width: 40%;
+}
+
+.back {
+  margin-left: 90px;
+}
+
+.Room-details-img {
+  margin-left: 5px;
+  width: 50%;
+  margin-left: 60px;
+}
+
+.Room-details-img img {
+  width: 100%;
+  margin-left: 20px;
+}
+  
+  
+}
+
