@@ -1,0 +1,13 @@
+* reservation styles*/
+.ReservationList {
+  margin: auto;
+  width: 95%;
+}
+.ReservationList-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.Reservation-img img {
+  width: 50%;
+}

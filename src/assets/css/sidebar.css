@@ -1,0 +1,42 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.SideBar h3 {
+  
+}
+
+.SideBar ul {
+
+}
+
+.SideBar ul li {
+  
+}
+
+.active a {
+  
+}
+
+.SideBar ul li a {
+  
+}
+
+.active {
+  
+}
+
+.SideBar-social {
+  
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+}

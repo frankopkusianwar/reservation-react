@@ -1,0 +1,68 @@
+.RoomList {
+  margin: auto;
+  width: 90%;
+}
+
+.RoomList-text {
+  text-align: center;
+}
+
+.RoomList-content {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.Room {
+  flex: 80%;
+}
+
+.RoomLDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 0 0 300px;
+}
+
+.details-last p {
+  font-size: 9px;
+  font-weight: bolder;
+}
+
+.details-p p:nth-child(odd) {
+  background-color: #f2f2f2;
+  padding: 7px;
+}
+
+.details-last {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.back {
+  margin-left: 180px;
+}
+
+.bck {
+  width: 10%;
+}
+
+.Room-img img {
+  width: 15%;
+}
+
+.Room-details-img img {
+  width: 70%;
+}
+
+.description {
+  color: lightgray;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.title {
+  border-bottom: 3px dotted lightgray;
+  padding-bottom: 17px;
+  width: 13%;
+}

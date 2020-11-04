@@ -1,0 +1,77 @@
+.App {
+  background: yellowgreen;
+  padding: 8%;
+  color: white;
+  text-align: center;
+}
+
+.App-content {
+  width: 45%;
+  margin: auto;
+}
+
+.App-content p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.App h3 {
+  border-bottom: 0.2px solid wheat;
+  padding-bottom: 20px;
+  font-weight: bolder;
+}
+
+.form select,
+.form .button {
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
+}
+
+.form .button {
+  background: white;
+  color: yellowgreen;
+  border: none;
+}
+
+.form select {
+  background: none;
+  color: white;
+  border: 2px solid white;
+}
+
+.form select option {
+  background: white;
+  color: yellowgreen;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  .App-content {
+    width: 50%;
+  }
+  
+  .App-content p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .App h3 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .form select,
+  .form .button {
+    padding: 7px;
+    width: 30%;
+  }
+  
+}
