@@ -149,7 +149,7 @@ button {
 }
 
 .Room-img img {
-  width: 15%;
+  width: 95%;
 }
 
 .Room-details-img img {
@@ -282,4 +282,19 @@ span.psw {
   .cancelbtn {
     width: 100%;
   }
+}
+
+
+/* reservation styles*/
+.ReservationList {
+  margin: auto;
+  width: 95%;
+}
+.ReservationList-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.Reservation-img img {
+  width: 50%;
 }

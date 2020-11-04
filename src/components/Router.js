@@ -7,6 +7,7 @@ import { toggleMenu } from '../actions/index'
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import RoomList from '../containers/RoomList';
+import ReservationList from '../containers/ReservationList';
 import RoomDetails from '../containers/RoomDetails'
 import App from './App';
 
@@ -35,6 +36,7 @@ const Router = () => {
             <Route path="/" component={App} exact />
             <Route path="/rooms" component={RoomList} />
             <Route path="/details/:id" component={RoomDetails} />
+            <Route path="/reservations" component={ReservationList} />
           </Sidebar>
         </Switch>
       </BrowserRouter>
