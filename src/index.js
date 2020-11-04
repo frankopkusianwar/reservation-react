@@ -6,6 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import './assets/css/index.css';
 import './assets/css/sidebar.css';
+import './assets/css/room.css';
 import rootReducer from '../src/reducers/index'
 import Router from './components/Router';
 

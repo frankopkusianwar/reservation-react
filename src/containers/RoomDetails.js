@@ -33,10 +33,10 @@ const RoomLDetails = (props) => {
         <div className="Room-details-img">
           <img src={image2} alt="room" />
         </div>
-        <div>
-          <h1>{ roomData.title }</h1>
+        <div className="details-text">
+          <h2>{ roomData.title }</h2>
           <div className="details-p">
-            <p><b>Fee:</b> { roomData.fee }</p>
+            <p><b>Fee:</b> <span>{ roomData.fee }</span></p>
             <p><b>Bed:</b> { roomData.bed }</p>
             <p><b>View:</b> city view</p>
             <p><b>Size:</b>{roomData.size }</p>

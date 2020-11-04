@@ -26,15 +26,6 @@ button {
   width: 100%;
 }
 
-.book button {
-  border-radius: 20px;
-  padding: 13px;
-  background-color: yellowgreen;
-  border: none;
-  color: white;
-  margin-top: 40px;
-}
-
 /* login and signup forms */
 
 input[type=text],

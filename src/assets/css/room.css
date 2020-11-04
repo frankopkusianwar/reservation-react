@@ -19,9 +19,7 @@
 
 .RoomLDetails {
   display: flex;
-  justify-content: space-between;
-  width: 60%;
-  margin: 0 0 0 300px;
+  margin: auto;
 }
 
 .details-last p {
@@ -29,40 +27,60 @@
   font-weight: bolder;
 }
 
+.details-p p {
+  line-height: 10px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .details-p p:nth-child(odd) {
   background-color: #f2f2f2;
   padding: 7px;
 }
 
-.details-last {
+.details-text {
+  margin-right: 150px;
   text-align: right;
+}
+
+.book button {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: yellowgreen;
+  border: none;
+  color: white;
   margin-top: 30px;
+  width: 40%;
 }
 
 .back {
-  margin-left: 180px;
+  margin-left: 150px;
+  width: 20%;
+
 }
 
-.bck {
-  width: 10%;
-}
-
-.Room-img img {
+/* .Room-img img {
   width: 15%;
+} */
+.Room-details-img {
+  margin-left: 70px;
+  width: 60%;
 }
 
 .Room-details-img img {
   width: 70%;
+  margin-left: 200px;
 }
 
-.description {
+/* .description {
   color: lightgray;
   font-size: 14px;
   margin-top: 10px;
-}
+} */
 
-.title {
+/* .title {
   border-bottom: 3px dotted lightgray;
   padding-bottom: 17px;
   width: 13%;
-}
+} */
