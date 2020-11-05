@@ -13,10 +13,8 @@ const ReservationList = () => {
 
   // const allRooms = useSelector(state => state.rooms.rooms);
   return (
-    <div className="ReservationList">
-      <div className="ReservationList-text">
-        <h2>Reservations</h2>
-      </div>
+    <div className="List-content">
+      <h2>Reservations Made</h2>
       <div className="ReservationList-content">
         {
           ['abc','def','abc','def','abc','def']

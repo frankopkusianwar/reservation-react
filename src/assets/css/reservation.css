@@ -1,13 +1,41 @@
-* reservation styles*/
-.ReservationList {
-  margin: auto;
-  width: 95%;
-}
-.ReservationList-content {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+.List-content {
+  margin: 20px auto;
+  width: 80%;
 }
 
+.ReservationList-content {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.Reservation {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 1px solid lightgray;
+  margin-top: 15px;
+  margin-left: 10px;
+}
 .Reservation-img img {
-  width: 50%;
+  width: 100%;
+}
+
+.text-content {
+  margin: 10px;
+}
+
+.icon-rsv {
+  margin-right: 10px;
+}
+
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .List-content {
+    margin: 20px auto;
+    width: 98%;
+  }
+
+  .Reservation {
+    grid-template-columns: 60% 40%;
+  }
 }

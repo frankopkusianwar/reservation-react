@@ -7,6 +7,7 @@ import thunk from 'redux-thunk';
 import './assets/css/index.css';
 import './assets/css/sidebar.css';
 import './assets/css/room.css';
+import './assets/css/reservation.css';
 import rootReducer from '../src/reducers/index'
 import Router from './components/Router';
 
