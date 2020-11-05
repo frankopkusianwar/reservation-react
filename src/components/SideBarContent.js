@@ -1,17 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
-const SideBarContent = () => {
+const SideBarContent = (props) => {
+
+  const logout = () => {
+    window.location.reload()
+    sessionStorage.clear()
+  }
+
   return (
     <div className="SideBar">
       <h3>HOTEL ELDIMA</h3>
       <ul>
         <li className="active"><Link to="/">HOME</Link></li>
         <li><Link to="/rooms">ROOMS</Link></li>
-        <li><Link to="/reservations">RESERVATIONS</Link></li>
         <li><Link to="#">LIFESTYLE</Link></li>
-        <li><Link to="#">SHOP</Link></li>
+        <li><Link to="/reservations">RESERVATIONS</Link></li>
+        { sessionStorage.getItem('token') ? <li><Link to="/" onClick={logout}>LOGOUT</Link></li>:<li></li>}
       </ul>
       <div className="SideBar-social">
       <FaFacebookF style={{ fill: '#d1cfd0' }} className="icon"/>
