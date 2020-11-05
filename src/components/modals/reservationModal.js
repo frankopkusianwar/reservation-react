@@ -1,6 +1,6 @@
 import React from "react";
 
-const Modal = ({ show, children }) => {
+const ReservationModal = ({ show, children }) => {
   const showHideClassName = show ? "block" : "none";
   return (
     <div className="modal" style={{display: showHideClassName}}>
@@ -9,4 +9,4 @@ const Modal = ({ show, children }) => {
   );
 };
 
-export default Modal;
+export default ReservationModal;
