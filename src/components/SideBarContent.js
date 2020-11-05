@@ -9,6 +9,7 @@ const SideBarContent = () => {
       <ul>
         <li className="active"><Link to="/">HOME</Link></li>
         <li><Link to="/rooms">ROOMS</Link></li>
+        <li><Link to="/reservations">RESERVATIONS</Link></li>
         <li><Link to="#">LIFESTYLE</Link></li>
         <li><Link to="#">SHOP</Link></li>
       </ul>

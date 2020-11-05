@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { fetchReservations } from '../actions/index'
 import Reservation from '../components/Reservation'
+import { Authenticated } from '../authenticated'
 import propTypes from 'prop-types';
 
 const ReservationList = () => {
@@ -33,4 +34,4 @@ ReservationList.propTypes = {
   
 };
 
-export default ReservationList;
+export default Authenticated(ReservationList);

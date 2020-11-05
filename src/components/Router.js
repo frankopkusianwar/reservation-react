@@ -27,7 +27,7 @@ const Router = () => {
               sidebar={<SidebarContent />}
               open={status}
               onSetOpen={onSetSidebarOpen}
-              styles={{ sidebar: { background: "white", width: "17%"} }}
+              styles={{ sidebar: { background: "white", width: "18%"} }}
             >
             <div className="Header">
               <FontAwesomeIcon icon={faBars} onClick={() => onSetSidebarOpen(true)}/>
