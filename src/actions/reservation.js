@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import jwt_decode from 'jwt-decode'
 
 const CREATE_RESERVATION = 'CREATE_RESERVATION';
 const CREATE_RESERVATION_SUCESS = 'CREATE_RESERVATION_SUCESS';
@@ -23,14 +24,11 @@ export const createReservationFailure = error => ({
 
 
 export const startCreate = reservation => (dispatch) => {
-  console.log(sessionStorage.token);
   dispatch(createReservation());
+
   return axios
-    .post('https://capstone-api-v1.herokuapp.com/reservations', reservation, {headers: {
-      'Authorization': `${sessionStorage.token}`
-    },})
+    .post('https://capstone-api-v1.herokuapp.com/reservations', reservation,)
     .then((response) => {
-      console.log(response);
       toast.dismiss();
       dispatch(createReservationSucess(response));
       if (response.status === 201) {

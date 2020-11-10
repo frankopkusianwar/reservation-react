@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import jwt_decode from 'jwt-decode'
 import { close } from '../../actions/index'
 import { startCreate } from '../../actions/reservation'
 import img_avatar2 from '../../assets/img/img_avatar2.png';
@@ -12,6 +13,7 @@ export class ReservationForm extends React.Component {
       date: '',
       city: '',
       room_id: '',
+      user_id: '',
     };
 
     this.changeHandler = this.changeHandler.bind(this);
@@ -32,18 +34,21 @@ export class ReservationForm extends React.Component {
   }
 
   handleSubmit = (e) => {
-    const { startCreate , close, room_id } = this.props;
+    const decoded_token = jwt_decode(sessionStorage.token)
+    const { startCreate , close, room_id, user_id } = this.props;
     e.preventDefault();
     // get our form data out of state
     const {
       date, city,
     } = this.state;
     
-    const data = {
+    let data = {
       date,
       city,
       room_id,
+      user_id: decoded_token.user_id,
     };
+
     startCreate(data);
     close()
   }
