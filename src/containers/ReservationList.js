@@ -1,28 +1,32 @@
 import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { fetchReservations } from '../actions/index'
+import { useDispatch, useSelector } from 'react-redux';
+import {  fetchReservations } from '../actions/reservation'
 import Reservation from '../components/Reservation'
-import { Authenticated } from '../authenticated'
 import propTypes from 'prop-types';
 
 const ReservationList = () => {
 
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchRooms());
-  // }, [dispatch]);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchReservations());
+  }, [dispatch]);
 
-  // const allRooms = useSelector(state => state.rooms.rooms);
+  const allReservations = useSelector(state => state.reservations.reservations);
+
   return (
-    <div className="List-content">
-      <h2>Reservations Made</h2>
-      <div className="ReservationList-content">
-        {
-          ['abc','def','abc','def','abc','def']
-          .map((result, key) => (
-              <Reservation result={result} key={key} />
-            ))
-        }
+    <div className="RoomList">
+      <div className="RoomList-text">
+        <h2>Available Rooms</h2>
+        <p>Please Select a Room</p>
+      </div>
+      <div className="RoomList-content">
+
+          {
+            allReservations
+            .map((result, key) => (
+                <Reservation result={result} key={key} />
+              ))
+          }
       </div>
     </div>
   );
@@ -34,4 +38,4 @@ ReservationList.propTypes = {
   
 };
 
-export default Authenticated(ReservationList);
+export default ReservationList;

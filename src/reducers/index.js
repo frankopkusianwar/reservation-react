@@ -6,7 +6,6 @@ import signupReducer from './signupReducer'
 import signinReducer from '../reducers/signinReaducer'
 import modalLogin from './modalLogin'
 import reservationReducer from './reservation'
-
 const rootReducer = combineReducers({
   sidebarOpen: sideBar,
   modalReducer,

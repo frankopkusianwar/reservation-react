@@ -80,7 +80,7 @@ export class ReservationForm extends React.Component {
 }
 
 export const mapStateToProps = (state) => {
-  const { isReserving, isReserved } = state.reservationReducer;
+  const { isReserved, isReserving } = state.reservationReducer;
   return {
     isReserving,
     isReserved,
