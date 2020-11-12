@@ -13,8 +13,11 @@ Reservation app enables users to view rooms, room details and make reservations 
 - create an acount
 - Login to the app
 
-## Home Page
-![screenshot]()
+## ROOMS Page
+![screenshot](./src/assets/img/listrooms.PNG)
+
+## Details Page
+![screenshot](./src/assets/img/roomdetails.PNG)
 
 ## Built With
 
