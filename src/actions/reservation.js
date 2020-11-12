@@ -50,7 +50,7 @@ export const startCreate = reservation => (dispatch) => {
 
   return axios
     .post('https://capstone-api-v1.herokuapp.com/reservations', reservation,)
-    .then((response) => {
+    .then((response) => { 
       toast.dismiss();
       dispatch(createReservationSucess(response));
       if (response.status === 201) {
