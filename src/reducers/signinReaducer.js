@@ -13,12 +13,14 @@ const signinReducer = (state = initialState, action) => {
     case 'LOGIN_USER_SUCESS':
       return {
         ...state,
+        isLoggingIn: false,
         loggedIn: true,
         data: action.payload,
       };
     case 'LOGIN_USER_FAILURE':
       return {
         ...state,
+        isLoggingIn: false,
         loggedIn: false,
         data: action.payload,
       };

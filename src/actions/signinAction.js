@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-const LOGIN_USER = 'LOGIN_USER ';
+const LOGIN_USER = 'LOGIN_USER';
 const LOGIN_USER_SUCESS = 'LOGIN_USER_SUCESS';
 const LOGIN_USER_FAILURE = 'LOGIN_USER_FAILURE';
 
