@@ -45,7 +45,7 @@ export const signinAction = credentials => (dispatch) => {
   return axios
     .post('https://capstone-api-v1.herokuapp.com/auth/login', credentials)
     .then((response) => {
-      sessionStorage.setItem('token', response.data.auth_token);
+      localStorage.setItem('token', response.data.auth_token);
       toast.dismiss();
       dispatch(loginUserSucess(response));
       toast.success('successfully loggedin!', {

@@ -18,7 +18,7 @@ export class LoginForm extends React.Component {
   }
 
   componentWillMount() {
-    if (sessionStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
       const { history } = this.props;
       history.push('/rooms');
     }

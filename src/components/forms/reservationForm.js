@@ -34,8 +34,8 @@ export class ReservationForm extends React.Component {
   }
 
   handleSubmit = (e) => {
-    const decoded_token = jwt_decode(sessionStorage.token)
-    const { startCreate , close, room_id, user_id } = this.props;
+    const decoded_token = jwt_decode(localStorage.token)
+    const { startCreate , close, room_id} = this.props;
     e.preventDefault();
     // get our form data out of state
     const {

@@ -49,7 +49,7 @@ const RoomLDetails = (props) => {
               <ReservationForm handleClose={modalClose} room_id={roomData.id} />
             </ReservationModal>
             <div className="book">
-              { sessionStorage.getItem('token') ? <button onClick={modalOpen}>Book Room</button>:<Link to="/"><button>Login to Book</button></Link>}
+              { localStorage.getItem('token') ? <button onClick={modalOpen}>Book Room</button>:<Link to="/"><button>Login to Book</button></Link>}
             </div>
           </div>
         </div>

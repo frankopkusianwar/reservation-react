@@ -7,7 +7,7 @@ const SideBarContent = (props) => {
 
   const logout = () => {
     window.location.reload()
-    sessionStorage.clear()
+    localStorage.clear()
   }
 
   return (
@@ -18,7 +18,7 @@ const SideBarContent = (props) => {
         <li><Link to="/rooms">ROOMS</Link></li>
         <li><Link to="#">LIFESTYLE</Link></li>
         <li><Link to="/reservations">RESERVATIONS</Link></li>
-        { sessionStorage.getItem('token') ? <li><Link to="/" onClick={logout}>LOGOUT</Link></li>:<li></li>}
+        { localStorage.getItem('token') ? <li><Link to="/" onClick={logout}>LOGOUT</Link></li>:<li></li>}
       </ul>
       <div className="SideBar-social">
       <FaFacebookF style={{ fill: '#d1cfd0' }} className="icon"/>
