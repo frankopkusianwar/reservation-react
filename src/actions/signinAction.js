@@ -6,7 +6,6 @@ const LOGIN_USER_FAILURE = 'LOGIN_USER_FAILURE';
 
 export const loginUser = () => ({
   type: LOGIN_USER,
-  payload: true,
 });
 
 export const loginUserSucess = response => ({
