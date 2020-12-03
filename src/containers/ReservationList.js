@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {  fetchReservations } from '../actions/reservation'
+import {  fetchReservations } from '../utils/api'
 import Reservation from '../components/Reservation'
 import propTypes from 'prop-types';
 

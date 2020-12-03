@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import signinAction from '../../actions/signinAction'
+import { signinAction } from '../../utils/api'
 import img_avatar2 from '../../assets/img/img_avatar2.png';
 import { close_login } from '../../actions/index'
 

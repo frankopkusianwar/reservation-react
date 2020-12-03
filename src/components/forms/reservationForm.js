@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import jwt_decode from 'jwt-decode'
 import { close } from '../../actions/index'
-import { startCreate } from '../../actions/reservation'
+import { startCreate } from '../../utils/api'
 import img_avatar2 from '../../assets/img/img_avatar2.png';
 
 export class ReservationForm extends React.Component {

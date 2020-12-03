@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 const TOGGLE_MENU = 'TOGGLE_MENU'
 const SHOW = 'SHOW'
 const CLOSE = 'CLOSE'
@@ -9,7 +7,6 @@ const CLOSE_LOGIN_SUBMIT = 'CLOSE_LOGIN_SUBMIT'
 const FETCH_ROOMS_REQUEST = 'FETCH_ROOMS_REQUEST';
 const FETCH_ROOMS_SUCCESS = 'FETCH_ROOMS_SUCCESS';
 const FETCH_ROOMS_FAILURE = 'FETCH_ROOMS_FAILURE';
-const ALLROOMSURL = `https://capstone-api-v1.herokuapp.com/rooms`
 
 export const toggleMenu = status => ({
   type: TOGGLE_MENU,
@@ -55,14 +52,3 @@ export const fetchRoomsFailure = error => ({
   type: FETCH_ROOMS_FAILURE,
   payload: error,
 });
-
-export const fetchRooms = () => dispatch => {
-  dispatch(fetchRoomsRequest);
-  axios.get(ALLROOMSURL).then(response => {
-    const rooms = response.data;
-    dispatch(fetchRoomsSuccess(rooms));
-  }).catch(error => {
-    const errorMessage = error.message;
-    dispatch(fetchRoomsFailure(errorMessage));
-  });
-};

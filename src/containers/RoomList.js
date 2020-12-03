@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { fetchRooms } from '../actions/index'
+import { fetchRooms } from '../utils/api'
 import Room from '../components/Room'
 import propTypes from 'prop-types';
 

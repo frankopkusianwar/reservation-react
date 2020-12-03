@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import img_avatar2 from '../../assets/img/img_avatar2.png';
-import signupAction from '../../actions/signupAction'
+import { signupAction } from '../../utils/api'
 import { close } from '../../actions/index'
 
 
