@@ -19,6 +19,10 @@ const Router = () => {
   const onSetSidebarOpen = (open) => {
     dispatch(toggleMenu(open));
   }
+
+  const barStyle = {
+    
+  }
   return (
     <div className="Main">
       <BrowserRouter>
@@ -27,7 +31,7 @@ const Router = () => {
               sidebar={<SidebarContent />}
               open={status}
               onSetOpen={onSetSidebarOpen}
-              styles={{ sidebar: { background: "white", width: "18%"} }}
+              styles={{ sidebar: { background: "white", width: "45%"} }}
             >
             <div className="Header">
               <FontAwesomeIcon icon={faBars} onClick={() => onSetSidebarOpen(true)}/>
