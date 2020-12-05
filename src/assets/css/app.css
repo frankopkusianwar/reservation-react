@@ -46,10 +46,13 @@
   color: yellowgreen;
 }
 
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 992px) {
+
+
+/* Media Query for Laptops and Desktops */ 
+@media (min-width: 1025px) and (max-width: 1280px){ 
+ 
   .App {
-    padding: 22.5%;
+    padding: 15.3%;
   }
 
   .App-content {
@@ -57,19 +60,127 @@
   }
   
   .App-content p {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 1.1em;
+    line-height: 24px;
   }
   
   .App h3 {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.3em;
+  }
+  
+  .form select,
+  .form .button {
+    padding: 10px;
+    width: 25%;
+  } 
+}
+
+/* Media Query for Tablets Ipads portrait mode */ 
+@media (min-width: 769px) and (max-width: 1024px){ 
+  .App {
+    padding: 14.7%;
+  }
+
+  .App-content {
+    width: 80%;
+  }
+  
+  .App-content p {
+    font-size: 1em;
+    line-height: 20px;
+  }
+  
+  .App h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  
+  .form select,
+  .form .button {
+    padding: 10px;
+    width: 25%;
+  }  
+} 
+
+/* Media Query for low resolution  Tablets, Ipads */ 
+@media (min-width: 481px) and (max-width: 768px) { 
+  .App {
+    padding: 10.3%;
+  }
+
+  .App-content {
+    width: 80%;
+  }
+  
+  .App-content p {
+    font-size: 0.8em;
+    line-height: 20px;
+  }
+  
+  .App h3 {
+    font-weight: bold;
+    font-size: 1.1em;
   }
   
   .form select,
   .form .button {
     padding: 7px;
-    width: 30%;
+    width: 25%;
+  } 
+} 
+
+/* Media Query for Mobile Devices */ 
+@media (max-width: 480px) { 
+  .App {
+    padding: 18.1%;
+  }
+
+  .App-content {
+    width: 100%;
   }
   
-}
+  .App-content p {
+    font-size: 0.7em;
+    line-height: 18px;
+  }
+  
+  .App h3 {
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  .form select,
+  .form .button {
+    padding: 3px;
+    width: 40%;
+  } 
+} 
+
+/* Media Query for Large screens */ 
+@media (min-width: 1281px) {  
+  .App {
+    padding: 17.3%;
+  }
+
+  .App-content {
+    width: 80%;
+  }
+  
+  .App-content p {
+    font-size: 1.3em;
+    line-height: 26px;
+  }
+  
+  .App h3 {
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  
+  .form select,
+  .form .button {
+    padding: 10px;
+    width: 20%;
+    font-size: 20px;
+  }  
+} 
