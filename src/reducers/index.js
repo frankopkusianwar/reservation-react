@@ -8,12 +8,12 @@ import modalLogin from './modalLogin'
 import reservationReducer from './reservation'
 const rootReducer = combineReducers({
   sidebarOpen: sideBar,
-  modalReducer,
-  modalLogin,
+  modal: modalReducer,
+  loginModal: modalLogin,
   rooms: roomReducer,
-  signupReducer,
-  signinReducer,
-  reservationReducer,
+  register: signupReducer,
+  login: signinReducer,
+  reservations: reservationReducer,
 });
 
 export default rootReducer;

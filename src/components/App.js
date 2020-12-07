@@ -11,8 +11,8 @@ import { close, show, close_login, show_login } from '../actions/index'
 const App = () => {
 
   const dispatch = useDispatch();
-  const modal = useSelector(state => state.modalReducer.modal);
-  const logModal = useSelector(state => state.modalLogin.loginmodal);
+  const modal = useSelector(state => state.modal.modal);
+  const logModal = useSelector(state => state.loginModal.loginmodal);
 
 
   let modalOpen = () => {

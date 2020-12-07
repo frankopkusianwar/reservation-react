@@ -79,7 +79,7 @@ export class LoginForm extends React.Component {
 }
 
 export const mapStateToProps = (state) => {
-  const { loggedIn } = state.signinReducer;
+  const { loggedIn } = state.login;
   return {
     loggedIn,
   };

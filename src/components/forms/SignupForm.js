@@ -82,7 +82,7 @@ export class SignupForm extends React.Component {
 }
 
 export const mapStateToProps = (state) => {
-  const { isSigningUp, isValid } = state.signupReducer;
+  const { isSigningUp, isValid } = state.register;
   return {
     isSigningUp,
     isValid,
