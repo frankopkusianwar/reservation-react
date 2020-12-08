@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import '../assets/css/app.css';
 import LoginForm from './forms/LoginForm';
@@ -49,7 +48,8 @@ const App = () => {
           </select>
           <button className="button" type="submit">Book Now</button>
           <p>
-            Already have an account?  <span className="logLinks" onClick={loginOpen}>Login</span>
+            Already have an account?
+            <button type="submit" className="logLinks" onClick={loginOpen}>Login</button>
           </p>
           <Modal show={modal}>
             <SignupForm handleClose={modalClose} />
@@ -59,7 +59,7 @@ const App = () => {
           </LoginModal>
           <h4>OR</h4>
           <p>
-            Sign up  <span className="logLinks" onClick={modalOpen}>Here</span>
+            <button className="logLinks" type="submit" onClick={modalOpen}>Signup Here</button>
           </p>
         </div>
       </div>
