@@ -8,8 +8,8 @@ const Reservation = ({ result }) => (
   <div className="Reservation">
     <div className="Reservation-img"><img src={image1} alt="reservation" /></div>
     <div className="text-content">
-      <h5 className='title'>{result.date}</h5>
-      <p className='description'>{result.city}</p>
+      <h5 className='title'>25-8-2020</h5>
+      <p className='description'>Kampala</p>
       <div className=''>
         <FaFacebookF style={{ fill: '#d1cfd0' }} className="icon-rsv"/>
         <FaTwitter style={{ fill: '#d1cfd0' }} className="icon-rsv"/>

@@ -14,15 +14,12 @@ const ReservationList = () => {
   const allReservations = useSelector(state => state.reservations.reservations);
 
   return (
-    <div className="RoomList">
-      <div className="RoomList-text">
-        <h2>Available Rooms</h2>
-        <p>Please Select a Room</p>
-      </div>
-      <div className="RoomList-content">
+    <div className="List-content">
+      <h2>Reservations</h2>
+      <div className="ReservationList-content">
 
           {
-            allReservations
+            ["one","two","one","two"]
             .map((result, key) => (
                 <Reservation result={result} key={key} />
               ))
