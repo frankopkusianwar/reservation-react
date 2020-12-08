@@ -24,6 +24,7 @@ export class ReservationForm extends React.Component {
       alert('Booking successfully done');
       const { history } = this.props;
       history.push('/reservations');
+      window.location.reload()
     }
   }
 
