@@ -7,7 +7,7 @@ import SignupForm from './forms/SignupForm';
 import Modal from './modals/Modal';
 import LoginModal from './modals/LoginModal';
 import {
-  close, show, close_login, show_login,
+  close, show, closeLogin, showLogin,
 } from '../actions/index';
 
 const App = () => {
@@ -24,11 +24,11 @@ const App = () => {
   };
 
   const loginOpen = () => {
-    dispatch(show_login());
+    dispatch(showLogin());
   };
 
   const loginClose = () => {
-    dispatch(close_login());
+    dispatch(closeLogin());
   };
 
   return (
@@ -47,10 +47,9 @@ const App = () => {
             <option>Mbale</option>
             <option>Jinja</option>
           </select>
-          <button className="button">Book Now</button>
+          <button className="button" type="submit">Book Now</button>
           <p>
-            Already have an account?
-            <Link to="#" onClick={loginOpen}>Login</Link>
+            Already have an account?  <span className="logLinks" onClick={loginOpen}>Login</span>
           </p>
           <Modal show={modal}>
             <SignupForm handleClose={modalClose} />
@@ -60,8 +59,7 @@ const App = () => {
           </LoginModal>
           <h4>OR</h4>
           <p>
-            Sign up
-            <Link to="#" onClick={modalOpen}>Here</Link>
+            Sign up  <span className="logLinks" onClick={modalOpen}>Here</span>
           </p>
         </div>
       </div>

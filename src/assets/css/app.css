@@ -46,6 +46,12 @@
   color: yellowgreen;
 }
 
+.logLinks {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
 
 /* Media Query for Laptops and Desktops */ 

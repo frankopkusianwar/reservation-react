@@ -4,7 +4,7 @@ import img_avatar2 from '../../assets/img/img_avatar2.png';
 import { signupAction } from '../../utils/api';
 import { close } from '../../actions/index';
 
-export class SignupForm extends React.Component {
+class SignupForm extends React.Component {
   constructor() {
     super();
     this.state = {

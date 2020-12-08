@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { signinAction } from '../../utils/api';
 import img_avatar2 from '../../assets/img/img_avatar2.png';
-import { close_login } from '../../actions/index';
+import { closeLogin } from '../../actions/index';
 
-export class LoginForm extends React.Component {
+class LoginForm extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -49,7 +49,7 @@ export class LoginForm extends React.Component {
       password,
     };
     signinAction(data);
-    close_login();
+    closeLogin();
   }
 
   render() {

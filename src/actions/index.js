@@ -23,12 +23,12 @@ export const close = () => ({
   payload: false,
 });
 
-export const show_login = () => ({
+export const showLogin = () => ({
   type: SHOW_LOGIN,
   payload: true,
 });
 
-export const close_login = () => ({
+export const closeLogin = () => ({
   type: CLOSE_LOGIN,
   payload: false,
 });
