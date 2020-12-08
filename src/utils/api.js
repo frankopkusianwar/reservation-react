@@ -112,7 +112,7 @@ export const fetchReservations = () => dispatch => {
   dispatch(getReservationRequest);
   axios.get(ALLRESERVAIONSURL,{
     headers: {
-      'Authorization': `${sessionStorage.token}`
+      'Authorization': `${localStorage.token}`
     }}).then(response => {
     const reservations = response.data;
     dispatch(getReservationSuccess(reservations));

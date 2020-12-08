@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import jwt_decode from 'jwt-decode'
 import { close } from '../../actions/index'
 import { startCreate } from '../../utils/api'
@@ -21,8 +22,9 @@ export class ReservationForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.isReserved) {
-      alert('Booking created done')
-      window.location.reload()
+      alert('Booking successfully done')
+      const { history } = this.props;
+      history.push('/reservations');
     }
   }
 
@@ -80,11 +82,11 @@ export class ReservationForm extends React.Component {
 }
 
 export const mapStateToProps = (state) => {
-  const { isReserved, isReserving } = state.reservationReducer;
+  const { isReserved, isReserving } = state.reservations;
   return {
     isReserving,
     isReserved,
   };
 };
 
-export default connect(mapStateToProps, { startCreate, close })(ReservationForm);
+export default connect(mapStateToProps, { startCreate, close })(withRouter(ReservationForm));

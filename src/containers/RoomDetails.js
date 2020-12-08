@@ -13,7 +13,7 @@ const RoomLDetails = (props) => {
 
   const roomData = props.location.state.result;
   const dispatch = useDispatch();
-  const modal = useSelector(state => state.modalReducer.modal);
+  const modal = useSelector(state => state.modal.modal);
 
   let handleSubmit = (e) => {
     dispatch(submitClose());

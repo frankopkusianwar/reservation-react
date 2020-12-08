@@ -28,8 +28,10 @@
 }
 
 
-/* On screens that are 992px or less, set the background color to blue */
-@media screen and (max-width: 992px) {
+
+
+/* Media Query for Tablets Ipads portrait mode */ 
+@media (min-width: 769px) and (max-width: 1024px){ 
   .List-content {
     margin: 20px auto;
     width: 98%;
@@ -38,4 +40,32 @@
   .Reservation {
     grid-template-columns: 60% 40%;
   }
-}
+} 
+
+/* Media Query for low resolution  Tablets, Ipads */ 
+@media (min-width: 481px) and (max-width: 768px) { 
+  .List-content {
+    margin: 20px auto;
+    width: 98%;
+  }
+
+  .Reservation {
+    grid-template-columns: 60% 40%;
+  }
+} 
+
+/* Media Query for Mobile Devices */ 
+@media (max-width: 480px) { 
+  .ReservationList-content {
+    display: block;
+    font-size: 0.7em;
+  }
+  .Reservation {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+
+  .List-content {
+    width: 96%;
+  }
+} 
