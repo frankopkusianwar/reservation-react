@@ -12,6 +12,7 @@ const ReservationList = () => {
   }, [dispatch]);
 
   const allReservations = useSelector(state => state.reservations.reservations);
+  console.log(allReservations)
 
   return (
     <div className="List-content">
@@ -19,7 +20,7 @@ const ReservationList = () => {
       <div className="ReservationList-content">
 
           {
-            ["one","two","one","two"]
+            ["one","two"]
             .map((result, key) => (
                 <Reservation result={result} key={key} />
               ))
