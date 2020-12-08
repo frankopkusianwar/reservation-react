@@ -1,19 +1,21 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { fetchRoomsRequest, fetchRoomsSuccess, fetchRoomsFailure } from '../actions/index'
-import { loginUser, loginUserSucess, loginUserfailure } from '../actions/signinAction'
-import { registerUser, registerUserSucess, registerUserfailure } from '../actions/signupAction'
-import { createReservation, createReservationSucess, createReservationFailure, 
-  getReservationRequest, getReservationSuccess, getReservationFailure } from '../actions/reservation'
+import { fetchRoomsRequest, fetchRoomsSuccess, fetchRoomsFailure } from '../actions/index';
+import { loginUser, loginUserSucess, loginUserfailure } from '../actions/signinAction';
+import { registerUser, registerUserSucess, registerUserfailure } from '../actions/signupAction';
+import {
+  createReservation, createReservationSucess, createReservationFailure,
+  getReservationRequest, getReservationSuccess, getReservationFailure,
+} from '../actions/reservation';
 
-const ALLROOMSURL = `https://capstone-api-v1.herokuapp.com/rooms`
-const ALLRESERVAIONSURL = "https://capstone-api-v1.herokuapp.com/reservations"
+const ALLROOMSURL = 'https://capstone-api-v1.herokuapp.com/rooms';
+const ALLRESERVAIONSURL = 'https://capstone-api-v1.herokuapp.com/reservations';
 
-export const signupAction = newUser => (dispatch) => {
+export const signupAction = newUser => dispatch => {
   dispatch(registerUser());
   return axios
-    .post('https://capstone-api-v1.herokuapp.com/signup', {user: newUser})
-    .then((response) => {
+    .post('https://capstone-api-v1.herokuapp.com/signup', { user: newUser })
+    .then(response => {
       toast.dismiss();
       dispatch(registerUserSucess(response));
       if (response.status === 201) {
@@ -29,7 +31,7 @@ export const signupAction = newUser => (dispatch) => {
       }
     })
     .catch(
-      (error) => {
+      error => {
         dispatch(registerUserfailure(error));
         toast.dismiss();
         toast.error(`${error.response}`, {
@@ -40,11 +42,11 @@ export const signupAction = newUser => (dispatch) => {
     );
 };
 
-export const signinAction = credentials => (dispatch) => {
+export const signinAction = credentials => dispatch => {
   dispatch(loginUser());
   return axios
     .post('https://capstone-api-v1.herokuapp.com/auth/login', credentials)
-    .then((response) => {
+    .then(response => {
       localStorage.setItem('token', response.data.auth_token);
       toast.dismiss();
       dispatch(loginUserSucess(response));
@@ -54,7 +56,7 @@ export const signinAction = credentials => (dispatch) => {
       });
     })
     .catch(
-      (error) => {
+      error => {
         dispatch(loginUserfailure(error));
         toast.dismiss();
         toast.error(`${error.response.message}`, {
@@ -76,12 +78,12 @@ export const fetchRooms = () => dispatch => {
   });
 };
 
-export const startCreate = reservation => (dispatch) => {
+export const startCreate = reservation => dispatch => {
   dispatch(createReservation());
 
   return axios
-    .post('https://capstone-api-v1.herokuapp.com/reservations', reservation,)
-    .then((response) => { 
+    .post('https://capstone-api-v1.herokuapp.com/reservations', reservation)
+    .then(response => {
       toast.dismiss();
       dispatch(createReservationSucess(response));
       if (response.status === 201) {
@@ -97,7 +99,7 @@ export const startCreate = reservation => (dispatch) => {
       }
     })
     .catch(
-      (error) => {
+      error => {
         dispatch(createReservationFailure(error));
         toast.dismiss();
         toast.error(`${error}`, {
@@ -110,10 +112,11 @@ export const startCreate = reservation => (dispatch) => {
 
 export const fetchReservations = () => dispatch => {
   dispatch(getReservationRequest);
-  axios.get(ALLRESERVAIONSURL,{
+  axios.get(ALLRESERVAIONSURL, {
     headers: {
-      'Authorization': `${localStorage.token}`
-    }}).then(response => {
+      Authorization: `${localStorage.token}`,
+    },
+  }).then(response => {
     const reservations = response.data;
     dispatch(getReservationSuccess(reservations));
   }).catch(error => {

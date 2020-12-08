@@ -1,9 +1,9 @@
-const TOGGLE_MENU = 'TOGGLE_MENU'
-const SHOW = 'SHOW'
-const CLOSE = 'CLOSE'
-const SHOW_LOGIN = 'SHOW_LOGIN'
-const CLOSE_LOGIN = 'CLOSE_LOGIN'
-const CLOSE_LOGIN_SUBMIT = 'CLOSE_LOGIN_SUBMIT'
+const TOGGLE_MENU = 'TOGGLE_MENU';
+const SHOW = 'SHOW';
+const CLOSE = 'CLOSE';
+const SHOW_LOGIN = 'SHOW_LOGIN';
+const CLOSE_LOGIN = 'CLOSE_LOGIN';
+const CLOSE_LOGIN_SUBMIT = 'CLOSE_LOGIN_SUBMIT';
 const FETCH_ROOMS_REQUEST = 'FETCH_ROOMS_REQUEST';
 const FETCH_ROOMS_SUCCESS = 'FETCH_ROOMS_SUCCESS';
 const FETCH_ROOMS_FAILURE = 'FETCH_ROOMS_FAILURE';
@@ -15,35 +15,34 @@ export const toggleMenu = status => ({
 
 export const show = () => ({
   type: SHOW,
-  payload: true
+  payload: true,
 });
 
 export const close = () => ({
   type: CLOSE,
-  payload: false
+  payload: false,
 });
 
 export const show_login = () => ({
   type: SHOW_LOGIN,
-  payload: true
+  payload: true,
 });
 
 export const close_login = () => ({
   type: CLOSE_LOGIN,
-  payload: false
+  payload: false,
 });
 
-export const submitClose = (name) => ({
+export const submitClose = name => ({
   type: CLOSE_LOGIN_SUBMIT,
   payload: name,
 });
-
 
 export const fetchRoomsRequest = () => ({
   type: FETCH_ROOMS_REQUEST,
 });
 
-export const fetchRoomsSuccess = (rooms) => ({
+export const fetchRoomsSuccess = rooms => ({
   type: FETCH_ROOMS_SUCCESS,
   payload: rooms,
 });

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const LoginModal = ({ show, children }) => {
-  const showHideClassName = show ? "block" : "none";
+  const showHideClassName = show ? 'block' : 'none';
   return (
-    <div className="modal" style={{display: showHideClassName}}>
-        {children}
+    <div className="modal" style={{ display: showHideClassName }}>
+      {children}
     </div>
   );
 };

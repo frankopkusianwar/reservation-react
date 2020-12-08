@@ -10,7 +10,7 @@ export const loginUser = () => ({
 
 export const loginUserSucess = response => ({
   type: LOGIN_USER_SUCESS,
-  payload: { msg: 'looged in', token:response.data.auth_token },
+  payload: { msg: 'looged in', token: response.data.auth_token },
 });
 
 export const loginUserfailure = error => ({

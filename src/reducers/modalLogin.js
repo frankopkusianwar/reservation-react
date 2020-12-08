@@ -1,32 +1,32 @@
 const initialState = {
   loginmodal: false,
-  name: "",
-  modalInputName: ""
+  name: '',
+  modalInputName: '',
 };
 
 const modalLogin = (state = initialState, action) => {
   switch (action.type) {
     case 'SHOW_LOGIN':
-      return { 
+      return {
         ...state,
         loginmodal: action.payload,
-        name: "",
-        modalInputName: ""
-      }
+        name: '',
+        modalInputName: '',
+      };
     case 'CLOSE_LOGIN':
-      return { 
+      return {
         ...state,
         loginmodal: action.payload,
-        name: "",
-        modalInputName: ""
-      }
+        name: '',
+        modalInputName: '',
+      };
     case 'CLOSE_LOGIN_SUBMITION':
-      return { 
+      return {
         ...state,
         loginmodal: false,
-        name: "",
-        modalInputName: action.payload
-      }
+        name: '',
+        modalInputName: action.payload,
+      };
     default:
       return state;
   }

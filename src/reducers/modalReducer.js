@@ -1,32 +1,32 @@
 const initialState = {
   modal: false,
-  name: "",
-  modalInputName: ""
+  name: '',
+  modalInputName: '',
 };
 
 const modalReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SHOW':
-      return { 
+      return {
         ...state,
         modal: action.payload,
-        name: "",
-        modalInputName: ""
-      }
+        name: '',
+        modalInputName: '',
+      };
     case 'CLOSE':
-      return { 
+      return {
         ...state,
         modal: action.payload,
-        name: "",
-        modalInputName: ""
-      }
+        name: '',
+        modalInputName: '',
+      };
     case 'CLOSE_LOGIN_SUBMIT':
-      return { 
+      return {
         ...state,
         modal: false,
-        name: "",
-        modalInputName: action.payload
-      }
+        name: '',
+        modalInputName: action.payload,
+      };
     default:
       return state;
   }

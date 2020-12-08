@@ -30,4 +30,3 @@ const reservationReducer = (state = initialState, action) => {
 };
 
 export default reservationReducer;
-
