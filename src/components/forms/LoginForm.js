@@ -17,14 +17,14 @@ class LoginForm extends React.Component {
     this.changeHandler = this.changeHandler.bind(this);
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (localStorage.getItem('token')) {
       const { history } = this.props;
       history.push('/rooms');
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       const { history } = this.props;
       history.push('/rooms');
@@ -58,7 +58,7 @@ class LoginForm extends React.Component {
     return (
       <form className="modal-content animate" onSubmit={this.handleSubmit}>
         <div className="imgcontainer">
-          <span className="close" title="Close Modal" onClick={handleClose}>&times;</span>
+          <span className="close" title="Close Modal" onClick={handleClose} onKeyDown={handleClose} role="button" tabIndex={0}>&times;</span>
           <img src={imgAvatar2} alt="Avatar" className="avatar" />
         </div>
 

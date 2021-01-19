@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import propTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import { close } from '../../actions/index';
 import { startCreate } from '../../utils/api';
-import img_avatar2 from '../../assets/img/img_avatar2.png';
 
 export class ReservationForm extends React.Component {
   constructor() {
@@ -12,8 +12,6 @@ export class ReservationForm extends React.Component {
     this.state = {
       date: '',
       city: '',
-      room_id: '',
-      user_id: '',
     };
 
     this.changeHandler = this.changeHandler.bind(this);
@@ -36,7 +34,7 @@ export class ReservationForm extends React.Component {
   }
 
   handleSubmit = e => {
-    const decoded_token = jwt_decode(localStorage.token);
+    const decodedToken = jwtDecode(localStorage.token);
     const { startCreate, close, room_id } = this.props;
     e.preventDefault();
     // get our form data out of state
@@ -48,7 +46,7 @@ export class ReservationForm extends React.Component {
       date,
       city,
       room_id,
-      user_id: decoded_token.user_id,
+      user_id: decodedToken.user_id,
     };
 
     startCreate(data);
@@ -60,7 +58,7 @@ export class ReservationForm extends React.Component {
       <form className="modal-content animate" onSubmit={this.handleSubmit}>
         <div className="imgcontainer">
           <span className="close" title="Close Modal" onClick={this.props.handleClose}>&times;</span>
-          <img src={img_avatar2} alt="Avatar" className="avatar" />
+          <h3>Make Your Reservation</h3>
         </div>
 
         <div className="container">
