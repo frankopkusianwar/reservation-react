@@ -1,0 +1,71 @@
+.List-content {
+  margin: 20px auto;
+  width: 80%;
+}
+
+.ReservationList-content {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.Reservation {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 1px solid lightgray;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.Reservation-img img {
+  width: 100%;
+}
+
+.text-content {
+  margin: 10px;
+}
+
+.icon-rsv {
+  margin-right: 10px;
+}
+
+
+
+
+/* Media Query for Tablets Ipads portrait mode */ 
+@media (min-width: 769px) and (max-width: 1024px){ 
+  .List-content {
+    margin: 20px auto;
+    width: 98%;
+  }
+
+  .Reservation {
+    grid-template-columns: 60% 40%;
+  }
+} 
+
+/* Media Query for low resolution  Tablets, Ipads */ 
+@media (min-width: 481px) and (max-width: 768px) { 
+  .List-content {
+    margin: 20px auto;
+    width: 98%;
+  }
+
+  .Reservation {
+    grid-template-columns: 60% 40%;
+  }
+} 
+
+/* Media Query for Mobile Devices */ 
+@media (max-width: 480px) { 
+  .ReservationList-content {
+    display: block;
+    font-size: 0.7em;
+  }
+  .Reservation {
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+
+  .List-content {
+    width: 96%;
+  }
+} 
